@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <h1>danyal</h1>
+
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">weather App</a>
@@ -44,15 +44,13 @@
           </li>
         </ul>
         <form class="d-flex" role="search">
-          <input id="city"  class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <input id="cityInput"  class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit" id="submit" >Search</button>
         </form>
       </div>
     </div>
   </nav>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
+  
 
   <div class="container">
 
@@ -65,11 +63,13 @@
               <h4 class="my-0 fw-normal">Temperatures</h4>
             </div>
             <div class="card-body">
-              <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1>
+              <h1 class="card-title pricing-card-title"><span id="temp2"></span><small class="text-body-secondary fw-light">c <sup>0</sup> </small></h1>
               <ul class="list-unstyled mt-3 mb-4">
-                <li>Sunrise <span id="sunrise"></span></li>
-                <li>Sunset <span id="sunset"></span></li>
-                <li>Humidity <span id="humidity"></span></li>
+                <li>Temperature is <span id="temp"></span></li>
+                <li>Min Tempreture <span id="min_temp"></span></li>
+                <li>Max Tempreture <span id="max_temp"></span></li>
+
+               
 
                 
               </ul>
@@ -80,15 +80,15 @@
         <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm">
             <div class="card-header py-3">
-              <h4 class="my-0 fw-normal">Pro</h4>
+              <h4 class="my-0 fw-normal">Humidity info</h4>
             </div>
             <div class="card-body">
-              <h1 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/mo</small></h1>
+              <h1 class="card-title pricing-card-title"><span id="humidity2"></span><small class="text-body-secondary fw-light">%</small></h1>
               <ul class="list-unstyled mt-3 mb-4">
-                <li>Temperature is <span id="temp"></span></li>
-                <li>Min Tempreture <span id="min_temp"></span></li>
-                <li>Max Tempreture <span id="max_temp"></span></li>
-
+                <li>Sunrise <span id="sunrise"></span></li>
+                <li>Sunset <span id="sunset"></span></li>
+                <li>Humidity <span id="humidity"></span></li>
+                
               </ul>
               <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
             </div>
@@ -97,10 +97,10 @@
         <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm border-primary">
             <div class="card-header py-3 text-bg-primary border-primary">
-              <h4 class="my-0 fw-normal">Enterprise</h4>
+              <h4 class="my-0 fw-normal">Wind info</h4>
             </div>
             <div class="card-body">
-              <h1 class="card-title pricing-card-title">$29<small class="text-body-secondary fw-light">/mo</small></h1>
+              <h1 class="card-title pricing-card-title"><span id="wind_speed2"></span<small class="text-body-secondary fw-light"> km/hr </small></h1>
               <ul class="list-unstyled mt-3 mb-4">
                 <li>Feels like<span id="feels_like"></span></li>
                 <li>Wind Speed <span id="wind_speed"></span></li>
@@ -120,31 +120,31 @@
           <thead>
             <tr>
               <th></th>
-              <th style="width: 22%;">Cloud_pct </th>
+              <th style="width: 22%;">Temp</th>
               <th style="width: 22%;">Feels_like</th>
               <th style="width: 22%;">Humidity</th>
               <th style="width: 22%;">Max_temp</th>
               <th style="width: 22%;">Min_temp</th>
               <th style="width: 22%;">Sunrise</th>
               <th style="width: 22%;">Sunset</th>
-              <th style="width: 22%;">Temp</th>
+              <th style="width: 22%;">Cloud_pct </th>
               <th style="width: 22%;">Wind_degrees</th>
               <th style="width: 22%;">Wind_speed</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row" class="text-start">Karachi</th>
+              <th id="cityNamee" scope="row" class="text-start">Karachi</th>
+              <td><span id="Tempp"></span></td>
+              <td><span id="feeels_like"></span></td>
+              <td><span id="Humidityy"></span></td>
+              <td><span id="Max_tempp"></span></td>
+              <td><span id="Min_tempp"></span></td>
+              <td><span id="Sunrisee"></span></td>
+              <td><span id="Sunsett"></span></td>
               <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
-              <td>5</td>
-              <td>6</td>
-              <td>7</td>
-              <td>8</td>
-              <td>9</td>
-              <td>10</td>
+              <td><span id="Wind_degreess"></span></td>
+              <td><span id="WindSpeedd"></span></td>
             <tr>
               <th scope="row" class="text-start">Islamabad</th>
 
@@ -224,7 +224,9 @@
 
 
 
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+  crossorigin="anonymous"></script>
 
   <script src="app.js"></script>
 </body>
