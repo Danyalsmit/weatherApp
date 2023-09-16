@@ -31,7 +31,8 @@ const options = {
   const Sunsett = document.getElementById("Sunsett");
   const Tempp = document.getElementById("Tempp");
   const WindDegreess = document.getElementById("Wind_degreess");
-  
+  const cityNamee = document.getElementById("cityNamee");
+
   
   const getWeather = (city) => {
 	cityName.innerHTML = city;
@@ -73,4 +74,5 @@ const options = {
   });
   
   getWeather("Quetta");
+  
   

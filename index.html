@@ -7,11 +7,12 @@
   <title>weather app </title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar  bg-primary navbar-expand-lg bg-body-tertiary"data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">weather App</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -47,9 +48,11 @@
           <input id="cityInput"  class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit" id="submit" >Search</button>
         </form>
-      </div>
+
+    </div>
     </div>
   </nav>
+  <!-- <img src=" http://wallpapercave.com/wp/AiUUrs6.jpg" alt="picture">    -->
   
 
   <div class="container">
@@ -57,29 +60,25 @@
     <h1 class="my-4 text-center"> Weather for <span id="cityName"></span></h1>
     <main>
       <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-        <div class="col">
+        <div class="col ">
           <div class="card mb-4 rounded-3 shadow-sm">
-            <div class="card-header py-3">
+            <div class="card-header py-3 text-bg-dark border-dark">
               <h4 class="my-0 fw-normal">Temperatures</h4>
             </div>
-            <div class="card-body">
+            <div class="card-body " >
               <h1 class="card-title pricing-card-title"><span id="temp2"></span><small class="text-body-secondary fw-light">c <sup>0</sup> </small></h1>
               <ul class="list-unstyled mt-3 mb-4">
                 <li>Temperature is <span id="temp"></span></li>
                 <li>Min Tempreture <span id="min_temp"></span></li>
                 <li>Max Tempreture <span id="max_temp"></span></li>
-
-               
-
-                
-              </ul>
-              <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button>
+                   </ul>
+              <!-- <button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</button> -->
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm">
-            <div class="card-header py-3">
+            <div class="card-header py-3 text-bg-dark border-dark">
               <h4 class="my-0 fw-normal">Humidity info</h4>
             </div>
             <div class="card-body">
@@ -90,13 +89,13 @@
                 <li>Humidity <span id="humidity"></span></li>
                 
               </ul>
-              <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button>
+              <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Get started</button> -->
             </div>
           </div>
         </div>
         <div class="col">
           <div class="card mb-4 rounded-3 shadow-sm border-primary">
-            <div class="card-header py-3 text-bg-primary border-primary">
+            <div class="card-header py-3 text-bg-dark border-dark">
               <h4 class="my-0 fw-normal">Wind info</h4>
             </div>
             <div class="card-body">
@@ -107,29 +106,29 @@
                 <li>Wind Degrees <span id="wind_degrees"></span></li>
 
               </ul>
-              <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button>
+              <!-- <button type="button" class="w-100 btn btn-lg btn-primary">Contact us</button> -->
             </div>
           </div>
         </div>
       </div>
 
-      <h2 class="display-6 text-center mb-4"> Weather of other common places</h2>
+      <h2 class="my-4 text-center"> Weather of other common places</h2>
 
-      <div class="table-responsive">
+      <div class="table-responsive" data-bs-theme="dark" >
         <table class="table text-center">
-          <thead>
+          <thead >
             <tr>
-              <th></th>
-              <th style="width: 22%;">Temp</th>
-              <th style="width: 22%;">Feels_like</th>
-              <th style="width: 22%;">Humidity</th>
-              <th style="width: 22%;">Max_temp</th>
-              <th style="width: 22%;">Min_temp</th>
-              <th style="width: 22%;">Sunrise</th>
-              <th style="width: 22%;">Sunset</th>
-              <th style="width: 22%;">Cloud_pct </th>
-              <th style="width: 22%;">Wind_degrees</th>
-              <th style="width: 22%;">Wind_speed</th>
+              <th style="width:22%;background-color: rgb(15, 14, 14);color:white;"></th>
+              <th style="width:22%;background-color: rgb(15, 14, 14);color:white;">Temp</th>
+              <th style="width: 22%;background-color:rgb(15, 14, 14);color:white;">Feels_like</th>
+              <th style="width: 22%;background-color:rgb(15, 14, 14);color:white;">Humidity</th>
+              <th style="width: 22%;background-color:rgb(15, 14, 14);color:white;">Max_temp</th>
+              <th style="width: 22%;background-color:rgb(15, 14, 14);color:white;">Min_temp</th>
+              <th style="width: 22%;background-color:rgb(15, 14, 14);color:white;">Sunrise</th>
+              <th style="width: 22%;background-color:rgb(15, 14, 14);color:white;">Sunset</th>
+              <th style="width: 22%;background-color:rgb(15, 14, 14);color:white;">Cloud_pct </th>
+              <th style="width: 22%;background-color:rgb(15, 14, 14);color:white;">Wind_degrees</th>
+              <th style="width: 22%;background-color:rgb(15, 14, 14);color:white;">Wind_speed</th>
             </tr>
           </thead>
           <tbody>
@@ -148,15 +147,15 @@
             <tr>
               <th scope="row" class="text-start">Islamabad</th>
 
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
+              <td>30</td>
+              <td>37</td>
+              <td>73</td>
+              <td>29</td>
+              <td>29</td>
+              <td>1694870056</td>
+              <td>1694870056</td>
               <td>4</td>
-              <td>5</td>
-              <td>6</td>
-              <td>7</td>
-              <td>8</td>
-              <td>9</td>
+              <td>195</td>
               <td>10</td>
             </tr>
           </tbody>
@@ -164,54 +163,54 @@
           <tbody>
             <tr>
               <th scope="row" class="text-start">Lahore</th>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
-              <td>5</td>
-              <td>6</td>
-              <td>7</td>
+              <td>26</td>
+              <td>27</td>
+              <td>31</td>
+              <td>29</td>
+              <td>29</td>
+              <td>1694871457</td>
+              <td>1694870069</td>
               <td>8</td>
-              <td>9</td>
+              <td>199</td>
               <td>10</td>
             </tr>
             <tr>
               <th scope="row" class="text-start">Peshawar</th>
-              <td>1</td>
+              <td>24</td>
+              <td>25</td>
+              <td>29</td>
+              <td>28</td>
+              <td>24</td>
+              <td>1694874457</td>
+              <td>1684870056</td>
               <td>2</td>
-              <td>3</td>
-              <td>4</td>
-              <td>5</td>
-              <td>6</td>
-              <td>7</td>
-              <td>8</td>
-              <td>9</td>
+              <td>197</td>
               <td>10</td>
             </tr>
             <tr>
               <th scope="row" class="text-start">Rawalpindi</th>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
+              <td>22</td>
+              <td>27</td>
+              <td>31</td>
+              <td>29</td>
+              <td>29</td>
+              <td>1694870069</td>
+              <td>1694770386</td>
               <td>4</td>
-              <td>5</td>
-              <td>6</td>
-              <td>7</td>
-              <td>8</td>
-              <td>9</td>
+              <td>199</td>
               <td>10</td>
             </tr>
             <tr>
               <th scope="row" class="text-start">Multan</th>
-              <td>1</td>
+              <td>29</td>
+              <td>26</td>
+              <td>26</td>
+              <td>26</td>
+              <td>27</td>
+              <td>1694870386</td>
+              <td>1694770386</td>
               <td>2</td>
-              <td>3</td>
-              <td>4</td>
-              <td>5</td>
-              <td>6</td>
-              <td>7</td>
-              <td>8</td>
-              <td>9</td>
+              <td>196</td>
               <td>10</td>
             </tr>
           </tbody>
